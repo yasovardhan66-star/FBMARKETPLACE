@@ -1,14 +1,12 @@
-# FB Marketplace Website
+# FB Marketplace Website (HTML + CSS)
 
-A lightweight FB Marketplace-style website built with vanilla HTML, CSS, and JavaScript.
+A static FB Marketplace-style landing page implemented with **only HTML and CSS**.
 
-## Features
+## What's included
 
 - Facebook-inspired Marketplace layout
-- Responsive sidebar and listing grid
-- Search listings by title/location
-- Filter by category and maximum price
-- Reset filters in one click
+- Responsive sidebar + listing grid
+- Static listing cards (no JavaScript)
 
 ## Run locally
 
@@ -16,4 +14,15 @@ A lightweight FB Marketplace-style website built with vanilla HTML, CSS, and Jav
 python3 -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+Open <http://localhost:8000>.
+
+## Deploy
+
+Because this is a static site, you can deploy by uploading `index.html` and `styles.css` to any static host.
+
+### Quick GitHub Pages deployment
+
+1. Push this repo to GitHub.
+2. Go to **Settings → Pages**.
+3. Set source to **Deploy from a branch** and select `main` (root).
+4. Save, then open the generated Pages URL.

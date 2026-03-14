@@ -3,67 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FB Marketplace Clone</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>FB Marketplace (HTML + CSS)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="topbar">
-    <div class="brand">f</div>
+    <div class="brand" aria-label="Facebook logo">f</div>
     <h1>Marketplace</h1>
-    <button class="sell-btn">+ Sell</button>
+    <a class="sell-btn" href="#">+ Sell</a>
   </header>
 
   <main class="layout">
     <aside class="sidebar">
       <h2>Browse all</h2>
-      <div class="search-box">
-        <input id="searchInput" type="text" placeholder="Search Marketplace" />
-      </div>
 
-      <div class="filter-group">
-        <label for="categoryFilter">Category</label>
-        <select id="categoryFilter">
-          <option value="all">All Categories</option>
-          <option value="Vehicles">Vehicles</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Home">Home</option>
-          <option value="Furniture">Furniture</option>
-          <option value="Fashion">Fashion</option>
-        </select>
-      </div>
+      <label class="control-label" for="search">Search Marketplace</label>
+      <input id="search" class="control" type="text" placeholder="Static demo (HTML/CSS only)" disabled />
 
-      <div class="filter-group">
-        <label for="maxPrice">Max price ($)</label>
-        <input id="maxPrice" type="number" min="0" value="2000" />
-      </div>
+      <label class="control-label" for="category">Category</label>
+      <select id="category" class="control" disabled>
+        <option>All Categories</option>
+      </select>
 
-      <button id="resetFilters" class="ghost-btn">Reset filters</button>
+      <label class="control-label" for="price">Max price ($)</label>
+      <input id="price" class="control" type="number" value="2000" disabled />
+
+      <button class="ghost-btn" type="button" disabled>Reset filters</button>
+      <p class="hint">This version is intentionally built with only HTML and CSS.</p>
     </aside>
 
     <section>
       <div class="section-header">
         <h2>Today's picks</h2>
-        <span id="resultCount">0 items</span>
+        <span>8 items</span>
       </div>
 
-      <div id="listingGrid" class="listing-grid"></div>
+      <div class="listing-grid">
+        <article class="card c1">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$14,500</p><h3>2018 Honda Civic LX</h3><p>Vehicles • Austin, TX</p></div>
+        </article>
+        <article class="card c2">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$700</p><h3>iPhone 14 Pro 128GB</h3><p>Electronics • Seattle, WA</p></div>
+        </article>
+        <article class="card c3">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$120</p><h3>Wood Coffee Table</h3><p>Furniture • Denver, CO</p></div>
+        </article>
+        <article class="card c4">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$275</p><h3>Dyson V11 Vacuum</h3><p>Home • Chicago, IL</p></div>
+        </article>
+        <article class="card c5">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$210</p><h3>Gaming Monitor 27" 144Hz</h3><p>Electronics • Portland, OR</p></div>
+        </article>
+        <article class="card c6">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$450</p><h3>Road Bike - Trek FX 2</h3><p>Vehicles • Phoenix, AZ</p></div>
+        </article>
+        <article class="card c7">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$85</p><h3>Leather Jacket - Medium</h3><p>Fashion • Miami, FL</p></div>
+        </article>
+        <article class="card c8">
+          <div class="card-image"></div>
+          <div class="card-body"><p class="price">$190</p><h3>Queen Bed Frame + Headboard</h3><p>Furniture • Nashville, TN</p></div>
+        </article>
+      </div>
     </section>
   </main>
-
-  <template id="listingTemplate">
-    <article class="card">
-      <div class="card-image"></div>
-      <div class="card-body">
-        <p class="price"></p>
-        <h3 class="title"></h3>
-        <p class="meta"></p>
-      </div>
-    </article>
-  </template>
-
-  <script src="script.js"></script>
 </body>
 </html>
