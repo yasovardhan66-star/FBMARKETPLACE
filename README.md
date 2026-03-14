@@ -1,15 +1,28 @@
-# FBMARKETPLACE
-Welcome to our Facebook Marketplace Demo Website — a sample platform designed to showcase how online buying and selling works in a simple and user-friendly environment.
+# FB Marketplace Website (HTML + CSS)
 
-This demo marketplace allows users to browse product listings, explore item details, and experience the process of posting items for sale. It demonstrates key features commonly found in modern online marketplaces, including product categories, search functionality, item descriptions, pricing, and seller information.
+A static FB Marketplace-style landing page implemented with **only HTML and CSS**.
 
-The purpose of this project is to illustrate the structure and functionality of a marketplace platform similar to Facebook Marketplace. It is intended for educational and demonstration purposes only, helping developers, students, and businesses understand how a digital marketplace system operates.
+## What's included
 
-Key features include:
-• Product listing and browsing
-• Category-based navigation
-• Detailed item pages with price and description
-• Seller information display
-• Responsive design for desktop and mobile devices
+- Facebook-inspired Marketplace layout
+- Responsive sidebar + listing grid
+- Static listing cards (no JavaScript)
 
-This demo does not support real transactions and is meant purely for learning, prototyping, and showcasing marketplace functionality.
+## Run locally
+
+```bash
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000>.
+
+## Deploy
+
+Because this is a static site, you can deploy by uploading `index.html` and `styles.css` to any static host.
+
+### Quick GitHub Pages deployment
+
+1. Push this repo to GitHub.
+2. Go to **Settings → Pages**.
+3. Set source to **Deploy from a branch** and select `main` (root).
+4. Save, then open the generated Pages URL.
