@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FB Marketplace Clone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">f</div>
+    <h1>Marketplace</h1>
+    <button class="sell-btn">+ Sell</button>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <h2>Browse all</h2>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Search Marketplace" />
+      </div>
+
+      <div class="filter-group">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="Vehicles">Vehicles</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Home">Home</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Fashion">Fashion</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="maxPrice">Max price ($)</label>
+        <input id="maxPrice" type="number" min="0" value="2000" />
+      </div>
+
+      <button id="resetFilters" class="ghost-btn">Reset filters</button>
+    </aside>
+
+    <section>
+      <div class="section-header">
+        <h2>Today's picks</h2>
+        <span id="resultCount">0 items</span>
+      </div>
+
+      <div id="listingGrid" class="listing-grid"></div>
+    </section>
+  </main>
+
+  <template id="listingTemplate">
+    <article class="card">
+      <div class="card-image"></div>
+      <div class="card-body">
+        <p class="price"></p>
+        <h3 class="title"></h3>
+        <p class="meta"></p>
+      </div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

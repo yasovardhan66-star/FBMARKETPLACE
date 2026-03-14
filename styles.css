@@ -1,0 +1,182 @@
+:root {
+  --fb-blue: #1877f2;
+  --bg: #f0f2f5;
+  --text: #1c1e21;
+  --muted: #65676b;
+  --card: #fff;
+  --line: #dadde1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--fb-blue);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.sell-btn {
+  margin-left: auto;
+  border: none;
+  border-radius: 8px;
+  background: #e7f3ff;
+  color: var(--fb-blue);
+  font-weight: 600;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px 16px;
+}
+
+.sidebar {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.search-box input,
+.filter-group select,
+.filter-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.filter-group {
+  margin-top: 16px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.ghost-btn {
+  margin-top: 16px;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+#resultCount {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-image {
+  height: 150px;
+  background: linear-gradient(140deg, #d0e2ff, #f2f7ff);
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.price {
+  margin: 0;
+  font-weight: 700;
+}
+
+.title {
+  margin: 8px 0 6px;
+  font-size: 1rem;
+}
+
+.meta {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.empty-state {
+  background: #fff;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
+
+@media (max-width: 880px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
